@@ -1,0 +1,1301 @@
+
+*** Running vivado
+    with args -log top_level.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_level.tcl -notrace
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_level.tcl -notrace
+Command: link_design -top top_level -part xc7a200tfbg676-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+INFO: [Project 1-454] Reading design checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/.Xil/Vivado-554837-lapdune2/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.dcp' for cell 'gigabit_ehternet_inst/phy_inst'
+INFO: [Project 1-454] Reading design checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'sys_timing_endpoint/clock_manager'
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1692.574 ; gain = 0.000 ; free physical = 4927 ; free virtual = 9045
+INFO: [Netlist 29-17] Analyzing 660 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc] for cell 'gigabit_ehternet_inst/phy_inst/U0'
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc] for cell 'gigabit_ehternet_inst/phy_inst/U0'
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'gigabit_ehternet_inst/phy_inst/U0'
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'gigabit_ehternet_inst/phy_inst/U0'
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'sys_timing_endpoint/clock_manager/inst'
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'sys_timing_endpoint/clock_manager/inst'
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'sys_timing_endpoint/clock_manager/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc:57]
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'sys_timing_endpoint/clock_manager/inst'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file /home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file /home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc]
+CRITICAL WARNING: [Constraints 18-1055] Clock 'sysclk' completely overrides clock 'sysclk_p', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 10.000 -name sysclk [get_ports sysclk_p], [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:13]
+Previous: create_clock -period 10.000 [get_ports sysclk_p], [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc:56]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-2] Deriving generated clocks [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:16]
+WARNING: [Vivado 12-180] No cells matched '*/*/*/transceiver_inst/gtwizard_inst/*/gtwizard_i/gt0_GTWIZARD_i/gtpe2_i'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/trig'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:218]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:218]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[0]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[1]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[2]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[3]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[4]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[5]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[6]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[7]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[8]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[9]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[10]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[11]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[12]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[13]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[14]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+WARNING: [Vivado 12-507] No nets matched 'AFE_0/gen_spy_buffers_128/data_in[15]'. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc:222]
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/imports/Xilinx/constraints.xdc]
+Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/new/constraints_v2.xdc]
+Finished Parsing XDC File [/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.srcs/constrs_1/new/constraints_v2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 10 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2432.125 ; gain = 0.000 ; free physical = 4422 ; free virtual = 8536
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+13 Infos, 18 Warnings, 6 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2432.125 ; gain = 1101.051 ; free physical = 4422 ; free virtual = 8536
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2496.156 ; gain = 64.031 ; free physical = 4416 ; free virtual = 8530
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1076e0407
+
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2496.156 ; gain = 0.000 ; free physical = 4410 ; free virtual = 8524
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_BOT/storage_reg_i_10__1 into driver instance AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_BOT/wave_count[9]_i_5__1, which resulted in an inversion of 22 pins
+INFO: [Opt 31-1287] Pulled Inverter AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_MID/storage_reg_i_10__0 into driver instance AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_MID/wave_count[9]_i_5__0, which resulted in an inversion of 22 pins
+INFO: [Opt 31-1287] Pulled Inverter AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_TOP/storage_reg_i_10 into driver instance AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_TOP/wave_count[9]_i_5, which resulted in an inversion of 22 pins
+INFO: [Opt 31-1287] Pulled Inverter gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/internal_eth_dout[31]_i_1 into driver instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/internal_eth_dout[39]_i_3, which resulted in an inversion of 15 pins
+INFO: [Opt 31-1287] Pulled Inverter gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rx_cdrlock_counter[0]_i_1 into driver instance gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rx_cdrlocked_i_2, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_txresetfsm_i/time_out_counter[0]_i_1__0 into driver instance gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_txresetfsm_i/time_out_2ms_i_2__0, which resulted in an inversion of 2 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: d8fc7414
+
+Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+INFO: [Opt 31-389] Phase Retarget created 14 cells and removed 25 cells
+INFO: [Opt 31-1021] In phase Retarget, 42 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: ec0c48bb
+
+Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.4 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+INFO: [Opt 31-389] Phase Constant propagation created 46 cells and removed 113 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 40 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 12ae9536f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.5 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 26 cells
+INFO: [Opt 31-1021] In phase Sweep, 96 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 12ae9536f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4170 ; free virtual = 8284
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: b8df19e0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 12f38b033
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 40 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              14  |              25  |                                             42  |
+|  Constant propagation         |              46  |             113  |                                             40  |
+|  Sweep                        |               0  |              26  |                                             96  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             40  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+Ending Logic Optimization Task | Checksum: d8f4a9aa
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2753.938 ; gain = 0.000 ; free physical = 4169 ; free virtual = 8283
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 36 BRAM(s) out of a total of 87 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 48 newly gated: 87 Total Ports: 174
+Ending PowerOpt Patch Enables Task | Checksum: 121229536
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 3988 ; free virtual = 8103
+Ending Power Optimization Task | Checksum: 121229536
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3016.836 ; gain = 262.898 ; free physical = 4002 ; free virtual = 8116
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: f10bd97f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 4039 ; free virtual = 8158
+Ending Final Cleanup Task | Checksum: f10bd97f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 4039 ; free virtual = 8158
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 4039 ; free virtual = 8158
+Ending Netlist Obfuscation Task | Checksum: f10bd97f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 4039 ; free virtual = 8158
+INFO: [Common 17-83] Releasing license: Implementation
+46 Infos, 18 Warnings, 6 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3016.836 ; gain = 584.711 ; free physical = 4039 ; free virtual = 8158
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3016.836 ; gain = 0.000 ; free physical = 4019 ; free virtual = 8138
+INFO: [Common 17-1381] The checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_level_drc_opted.rpt -pb top_level_drc_opted.pb -rpx top_level_drc_opted.rpx
+Command: report_drc -file top_level_drc_opted.rpt -pb top_level_drc_opted.pb -rpx top_level_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4034 ; free virtual = 8155
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e03fe2bc
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4034 ; free virtual = 8155
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4034 ; free virtual = 8155
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 72048e3e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.53 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4034 ; free virtual = 8155
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 792b889f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4044 ; free virtual = 8166
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 792b889f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4044 ; free virtual = 8166
+Phase 1 Placer Initialization | Checksum: 792b889f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4044 ; free virtual = 8166
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 775f0bb6
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4121 ; free virtual = 8242
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: ddaee2ee
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4124 ; free virtual = 8245
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 135025e89
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4124 ; free virtual = 8245
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: da7c4fac
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:15 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4110 ; free virtual = 8227
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 52 LUTNM shape to break, 187 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 26, two critical 26, total 52, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 137 nets or LUTs. Breaked 52 LUTs, combined 85 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 12 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[5]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[7]. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[0]. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[11]. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[8]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[10]. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[2]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[6]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[9]. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[3]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[1]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net gen_eth_mux/rx_addr_reg_int_reg[17]_0[4]. Replicated 8 times.
+INFO: [Physopt 32-232] Optimized 12 nets. Created 50 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 12 nets or cells. Created 50 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4107 ; free virtual = 8225
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4107 ; free virtual = 8225
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           52  |             85  |                   137  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Fanout                                           |           50  |              0  |                    12  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          102  |             85  |                   149  |           0  |          10  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 13f814508
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:16 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4107 ; free virtual = 8225
+Phase 2.4 Global Placement Core | Checksum: 1573325f7
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:17 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4101 ; free virtual = 8219
+Phase 2 Global Placement | Checksum: 1573325f7
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:17 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4105 ; free virtual = 8223
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 183ebd0ae
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:19 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4105 ; free virtual = 8223
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: fb5b338f
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:21 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4098 ; free virtual = 8215
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: cbf26238
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:21 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4098 ; free virtual = 8215
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 111a67bdb
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:21 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4098 ; free virtual = 8215
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: af80cad4
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4070 ; free virtual = 8188
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1882fb007
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8180
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1bcb8e415
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8181
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 21a3445f5
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8181
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 14f9789eb
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:27 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4054 ; free virtual = 8172
+Phase 3 Detail Placement | Checksum: 14f9789eb
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:27 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4054 ; free virtual = 8172
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 15aa978ca
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.929 | TNS=-3346.884 |
+Phase 1 Physical Synthesis Initialization | Checksum: d16cad49
+
+Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4056 ; free virtual = 8174
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: d6d735ad
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.37 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4056 ; free virtual = 8174
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15aa978ca
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:28 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4056 ; free virtual = 8174
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-7.941. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1073e0b71
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:48 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:48 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+Phase 4.1 Post Commit Optimization | Checksum: 1073e0b71
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:48 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4035 ; free virtual = 8153
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1073e0b71
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:48 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1073e0b71
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:49 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+Phase 4.3 Placer Reporting | Checksum: 1073e0b71
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:49 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:49 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 15532e74d
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:49 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+Ending Placer Task | Checksum: 100c2d0a6
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:49 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4037 ; free virtual = 8155
+INFO: [Common 17-83] Releasing license: Implementation
+101 Infos, 18 Warnings, 6 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:00 ; elapsed = 00:00:50 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4091 ; free virtual = 8209
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.43 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4071 ; free virtual = 8205
+INFO: [Common 17-1381] The checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_level_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.43 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4066 ; free virtual = 8188
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_placed.rpt -pb top_level_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.48 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8185
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4049 ; free virtual = 8172
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 7.21s |  WALL: 1.81s
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4049 ; free virtual = 8172
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.941 | TNS=-2983.982 |
+Phase 1 Physical Synthesis Initialization | Checksum: 112285576
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.64 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4042 ; free virtual = 8165
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.941 | TNS=-2983.982 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 112285576
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.7 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4042 ; free virtual = 8165
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.941 | TNS=-2983.982 |
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/core_clocking_i/clkout0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]_i_2_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/ec_wrapper/crcSplice/gmii_tx_en.  Re-placed instance gigabit_ehternet_inst/eth_int_inst/ec_wrapper/crcSplice/tx_en_reg
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/ec_wrapper/crcSplice/gmii_tx_en. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2983.835 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK/gmii_rx_dv. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[6].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[6]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2982.863 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[10].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[10]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2981.910 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2980.961 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[2]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2980.014 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[2]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2979.107 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2978.301 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2977.498 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[11].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[11]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2976.749 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[6].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[6]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2976.009 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[10].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[10]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2975.274 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2974.553 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2973.833 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2973.113 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[11].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[11]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2972.395 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2971.678 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[5].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[5]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2970.966 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2970.260 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2969.563 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2968.869 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[5].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[5]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2968.177 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[6].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg[6]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2967.485 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2966.800 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2966.118 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2965.438 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[1]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-3181.141 |
+INFO: [Physopt 32-663] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2.  Re-placed instance AFE_0/fe_inst/reset_mclk_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-3181.009 |
+INFO: [Physopt 32-702] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/FSM_sequential_state[1]_i_1__7_comp.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/FSM_sequential_state[1]_i_3_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2795.161 |
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_4_n_2.  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_4
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_4_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2714.569 |
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/FSM_sequential_state[1]_i_1__7_comp_1.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_4_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2708.497 |
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/FSM_sequential_state[1]_i_1__7_comp.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_3_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2609.090 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[33]_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[33]_2. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_4__0_comp.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_7__0_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2504.257 |
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[33]_2. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_4__0_comp_1.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2495.329 |
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/FSM_sequential_state[1]_i_1__7_comp_2.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_4_n_2_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2488.705 |
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_10__0_n_2.  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_10__0
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_10__0_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2484.098 |
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2_repN.  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_comp
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2482.105 |
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_5_n_2.  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_5
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_5_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2476.033 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_7__0_n_2_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2474.306 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-571] Net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset was not replicated.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ots_addr[52].  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[52]
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ots_addr[52]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2461.058 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_7__0_n_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ots_addr[51].  Re-placed instance gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[51]
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ots_addr[51]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2449.370 |
+INFO: [Physopt 32-81] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2478.506 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-242] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_7_n_2. Rewired (signal push) gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[31]_0[25] to 2 loads. Replicated 0 times.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_7_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2643.289 |
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_TOP/p_0_in[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_TOP/storage_reg_0_0_i_3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_TOP/storage_reg_0_0_i_4_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_TOP/storage_reg_0_0_i_5_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gen_eth_mux/graycounter1_q_binary_reg[0][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gen_eth_mux/ram_rden_sig_reg.  Re-placed instance gen_eth_mux/storage_reg_i_16
+INFO: [Physopt 32-735] Processed net gen_eth_mux/ram_rden_sig_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2615.855 |
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_n_2.  Re-placed instance gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2615.614 |
+INFO: [Physopt 32-663] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_n_2.  Re-placed instance gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2615.293 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/graycounter1_q_binary_reg[0][0]. Critical path length was reduced through logic transformation on cell gen_eth_mux/storage_reg_0_0_i_7_comp.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/ram_rden_sig_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2610.869 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/DI[13]. Critical path length was reduced through logic transformation on cell gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_53_comp.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2610.488 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/graycounter1_q_binary_reg[0][0]. Critical path length was reduced through logic transformation on cell gen_eth_mux/storage_reg_0_0_i_7_comp_1.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/threshold_mode_reg[0]_i_2_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2608.078 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/DI[8]. Critical path length was reduced through logic transformation on cell gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_58_comp.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2607.942 |
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_BOT/storage_reg_0_13_n_69. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_BOT/storage_reg_0_0_i_3__1_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_BOT/storage_reg_0_0_i_4__1_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/FIFO_BOT/storage_reg_0_0_i_5__1_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gen_eth_mux/graycounter1_q_binary_reg[0]_1[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net gen_eth_mux/ram_rden_sig_reg.  Re-placed instance gen_eth_mux/storage_reg_i_16
+INFO: [Physopt 32-735] Processed net gen_eth_mux/ram_rden_sig_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2605.311 |
+INFO: [Physopt 32-663] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_n_2.  Re-placed instance gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_comp
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_158_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2605.104 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/graycounter1_q_binary_reg[0]_1[0]. Critical path length was reduced through logic transformation on cell gen_eth_mux/storage_reg_0_0_i_7__1_comp.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/ram_rden_sig_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2604.620 |
+INFO: [Physopt 32-710] Processed net gen_eth_mux/DI[4]. Critical path length was reduced through logic transformation on cell gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_62_comp.
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_169_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2604.490 |
+INFO: [Physopt 32-663] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_164_n_2.  Re-placed instance gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_164
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_164_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2604.375 |
+INFO: [Physopt 32-663] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_n_2.  Re-placed instance gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_comp
+INFO: [Physopt 32-735] Processed net gen_eth_mux/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_143_n_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2604.328 |
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/core_clocking_i/clkout0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]_i_2_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK/gmii_rx_dv. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[1].lpf/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[1].lpf/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[1].lpf/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2604.122 |
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2603.934 |
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2603.775 |
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[3].lpf/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[3].lpf/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[3].lpf/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2603.420 |
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2603.073 |
+INFO: [Physopt 32-663] Processed net AFE_0/filter_inst/i_instance[0].j_instance[6].filter_trigger/reset_reg.  Re-placed instance AFE_0/filter_inst/i_instance[0].j_instance[6].filter_trigger/reset_reg_reg
+INFO: [Physopt 32-735] Processed net AFE_0/filter_inst/i_instance[0].j_instance[6].filter_trigger/reset_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2602.824 |
+INFO: [Physopt 32-702] Processed net AFE_0/filter_inst/i_instance[0].j_instance[4].lpf/reset_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2595.096 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[0]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2594.316 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2593.537 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[6].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[6]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2592.759 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2591.986 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[10].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[10]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2591.321 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[13]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2590.661 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2590.006 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/DIA[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[14]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/DIA[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2589.354 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[10].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[10]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2588.704 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2588.054 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[10].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[10]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2587.405 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[2]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2586.760 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2586.118 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[1]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2585.480 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[14]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2584.844 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[14]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2584.209 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2583.580 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[3]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2582.956 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/DIA[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2582.333 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2581.713 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/DIA[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[15]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/DIA[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2581.100 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg[0]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2580.498 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/DIA[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2579.902 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[6].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2579.312 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[0]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2578.723 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2578.135 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/DIA[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2577.552 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2576.983 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[8].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[8]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2576.423 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[3]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2575.864 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[3]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg_n_2_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2575.306 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2574.754 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2574.202 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/DIA[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2573.653 |
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[5].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg[5]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[0].spy_inst/dia_reg_reg_n_2_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-7.794 | TNS=-2573.106 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/DIA[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[7].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[7]
+INFO: [Physopt 32-735] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[7]. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_7_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[31]_0[20]. Optimizations did not improve timing on the net.
+Phase 3 Critical Path Optimization | Checksum: 1db40596a
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:15 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4035 ; free virtual = 8157
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/core_clocking_i/clkout0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]_i_2_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK/gmii_rx_dv. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/filter_inst/i_instance[0].j_instance[4].lpf/reset_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[3]_9. Critical path length was reduced through logic transformation on cell gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset_reg_i_2_comp.
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[0]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[1]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg_n_2_[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[5].spy_inst/dia_reg_reg[3]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[5].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[5]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/DIA[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[13]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[9].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[9]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[3].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[3]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[1]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg_n_2_[5].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[4].spy_inst/dia_reg_reg[5]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg_n_2_[11].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[3].spy_inst/dia_reg_reg[11]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[7].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/DIA[0].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[2].spy_inst/dia_reg_reg[12]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg_n_2_[4].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[1].spy_inst/dia_reg_reg[4]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/DIA[1].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[13]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[2].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[2]
+INFO: [Physopt 32-663] Processed net AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg_n_2_[11].  Re-placed instance AFE_0/gen_spy_buffers/gen_spy_bit[8].spy_inst/dia_reg_reg[11]
+INFO: [Common 17-14] Message 'Physopt 32-663' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_7_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-571] Net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset was not replicated.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[31]_0[20]. Replicated 1 times.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[33]_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[31]_0[20]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/core_clocking_i/clkout0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net leds_controller_inst/led0_reg[4]_i_2_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK/gmii_rx_dv. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net AFE_0/fe_inst/reset_mclk_reg_reg_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/IDELAYE2_inst_i_5_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ram_addr_sig_reg[33]_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_6__0_n_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/reset. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_5__0_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_8__0_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net gigabit_ehternet_inst/eth_int_inst/data_manager_blk/RAM_COMM_DEC/ots_addr[44]. Optimizations did not improve timing on the net.
+Phase 4 Critical Path Optimization | Checksum: 11f40d78f
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8182
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8182
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-7.794 | TNS=-2341.742 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.147  |        642.239  |            2  |              0  |                   158  |           0  |           2  |  00:00:27  |
+|  Total          |          0.147  |        642.239  |            2  |              0  |                   158  |           0  |           3  |  00:00:27  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8182
+Ending Physical Synthesis Task | Checksum: 157ff01ff
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4063 ; free virtual = 8182
+INFO: [Common 17-83] Releasing license: Implementation
+493 Infos, 18 Warnings, 6 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:02:01 ; elapsed = 00:00:30 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4073 ; free virtual = 8192
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.54 . Memory (MB): peak = 3019.902 ; gain = 0.000 ; free physical = 4051 ; free virtual = 8186
+INFO: [Common 17-1381] The checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 6256aded ConstDB: 0 ShapeSum: afb11f75 RouteDB: 0
+Post Restoration Checksum: NetGraph: 5870d896 NumContArr: 5caf00ff Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: b51fd995
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 3081.832 ; gain = 61.930 ; free physical = 3860 ; free virtual = 7987
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: b51fd995
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 3119.832 ; gain = 99.930 ; free physical = 3813 ; free virtual = 7940
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: b51fd995
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 3119.832 ; gain = 99.930 ; free physical = 3813 ; free virtual = 7940
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: b4d0aee1
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 3187.332 ; gain = 167.430 ; free physical = 3751 ; free virtual = 7873
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.680 | TNS=-2132.291| WHS=-3.667 | THS=-656.164|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 11167
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 11167
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 148453a28
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:31 . Memory (MB): peak = 3187.332 ; gain = 167.430 ; free physical = 3786 ; free virtual = 7908
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 148453a28
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:31 . Memory (MB): peak = 3187.332 ; gain = 167.430 ; free physical = 3786 ; free virtual = 7908
+Phase 3 Initial Routing | Checksum: 1de0db399
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:39 . Memory (MB): peak = 3335.332 ; gain = 315.430 ; free physical = 3613 ; free virtual = 7731
+INFO: [Route 35-580] Design has 26 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+======================+================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock    | Pin                                                                                                                            |
++====================+======================+================================================================================================================================+
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[14] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[12] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[7]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[6]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[4]  |
++--------------------+----------------------+--------------------------------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1426
+ Number of Nodes with overlaps = 291
+ Number of Nodes with overlaps = 57
+ Number of Nodes with overlaps = 23
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.689 | TNS=-2810.331| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 2068f33f5
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:06 . Memory (MB): peak = 3335.332 ; gain = 315.430 ; free physical = 3796 ; free virtual = 7910
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.689 | TNS=-2765.124| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1a615547c
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:08 . Memory (MB): peak = 3335.332 ; gain = 315.430 ; free physical = 3801 ; free virtual = 7914
+Phase 4 Rip-up And Reroute | Checksum: 1a615547c
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:08 . Memory (MB): peak = 3335.332 ; gain = 315.430 ; free physical = 3801 ; free virtual = 7914
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 27fe922e5
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:08 . Memory (MB): peak = 3335.332 ; gain = 315.430 ; free physical = 3800 ; free virtual = 7914
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.689 | TNS=-2763.577| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1a8d1b30d
+
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:13 . Memory (MB): peak = 3489.332 ; gain = 469.430 ; free physical = 3707 ; free virtual = 7822
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1a8d1b30d
+
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:13 . Memory (MB): peak = 3489.332 ; gain = 469.430 ; free physical = 3707 ; free virtual = 7822
+Phase 5 Delay and Skew Optimization | Checksum: 1a8d1b30d
+
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:13 . Memory (MB): peak = 3489.332 ; gain = 469.430 ; free physical = 3707 ; free virtual = 7822
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 18193d001
+
+Time (s): cpu = 00:03:11 ; elapsed = 00:01:14 . Memory (MB): peak = 3489.332 ; gain = 469.430 ; free physical = 3707 ; free virtual = 7822
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.689 | TNS=-2763.071| WHS=-1.820 | THS=-108.415|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 1a3ee3907
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:02:23 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3579 ; free virtual = 7706
+Phase 6.1 Hold Fix Iter | Checksum: 1a3ee3907
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:02:23 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3579 ; free virtual = 7706
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.689 | TNS=-2763.188| WHS=-1.424 | THS=-11.055|
+
+Phase 6.2 Additional Hold Fix | Checksum: 144f9e2e4
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:24 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3602 ; free virtual = 7728
+WARNING: [Route 35-468] The router encountered 67 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[14]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[13]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[12]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[11]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[10]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[9]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[8]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[7]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[6]
+	gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[5]
+	.. and 57 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 10b0ebc37
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:24 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3602 ; free virtual = 7728
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.56275 %
+  Global Horizontal Routing Utilization  = 2.27944 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 78.3784%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 80.1802%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 83.8235%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1ea658502
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:24 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3602 ; free virtual = 7729
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1ea658502
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:24 . Memory (MB): peak = 5469.332 ; gain = 2449.430 ; free physical = 3602 ; free virtual = 7729
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 261fb83f2
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:02:24 . Memory (MB): peak = 5501.348 ; gain = 2481.445 ; free physical = 3602 ; free virtual = 7728
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 1910570be
+
+Time (s): cpu = 00:06:24 ; elapsed = 00:02:25 . Memory (MB): peak = 5501.348 ; gain = 2481.445 ; free physical = 3604 ; free virtual = 7731
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.689 | TNS=-2785.630| WHS=0.069  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1910570be
+
+Time (s): cpu = 00:06:24 ; elapsed = 00:02:25 . Memory (MB): peak = 5501.348 ; gain = 2481.445 ; free physical = 3604 ; free virtual = 7731
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:24 ; elapsed = 00:02:25 . Memory (MB): peak = 5501.348 ; gain = 2481.445 ; free physical = 3725 ; free virtual = 7852
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+513 Infos, 20 Warnings, 6 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:26 ; elapsed = 00:02:26 . Memory (MB): peak = 5501.348 ; gain = 2481.445 ; free physical = 3725 ; free virtual = 7852
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.5 . Memory (MB): peak = 5501.348 ; gain = 0.000 ; free physical = 3738 ; free virtual = 7884
+INFO: [Common 17-1381] The checkpoint '/home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_level_drc_routed.rpt -pb top_level_drc_routed.pb -rpx top_level_drc_routed.rpx
+Command: report_drc -file top_level_drc_routed.rpt -pb top_level_drc_routed.pb -rpx top_level_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_level_methodology_drc_routed.rpt -pb top_level_methodology_drc_routed.pb -rpx top_level_methodology_drc_routed.rpx
+Command: report_methodology -file top_level_methodology_drc_routed.rpt -pb top_level_methodology_drc_routed.pb -rpx top_level_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/cbenitez/Downloads/DAPHNE/DAPHNE_Massibo_TS_5bytes/DAPHNE_Massibo.runs/impl_1/top_level_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
+Command: report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+525 Infos, 20 Warnings, 6 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file top_level_route_status.rpt -pb top_level_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_level_timing_summary_routed.rpt -pb top_level_timing_summary_routed.pb -rpx top_level_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_level_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_level_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_level_bus_skew_routed.rpt -pb top_level_bus_skew_routed.pb -rpx top_level_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: write_bitstream -force top_level.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11 input AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11__2 output AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w3 output AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[0].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[1].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[2].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[3].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[4].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[5].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[6].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11__2 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w11__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w3 multiplier stage AFE_0/filter_inst/i_instance[0].j_instance[7].hpf/w3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC RTSTAT-10] No routable loads: 16 net(s) have no routable loads. The problem bus(es) and/or net(s) are AFE_0/filter_inst/i_instance[0].j_instance[6].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[0].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[3].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[1].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[7].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[2].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[5].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[4].filter_trigger/enable_reg, AFE_0/filter_inst/i_instance[0].j_instance[7].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[6].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[0].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[1].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[2].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[5].filter_trigger/reset_reg, AFE_0/filter_inst/i_instance[0].j_instance[3].filter_trigger/reset_reg... and (the first 15 of 16 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 41 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 54770016 bits.
+Writing bitstream ./top_level.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 5525.359 ; gain = 0.000 ; free physical = 3733 ; free virtual = 7882
+INFO: [Common 17-206] Exiting Vivado at Fri May  9 16:43:10 2025...

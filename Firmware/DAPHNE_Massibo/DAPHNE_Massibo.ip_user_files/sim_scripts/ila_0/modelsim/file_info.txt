@@ -1,0 +1,6 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/hdl/verilog"
+xpm_fifo.sv,systemverilog,xpm,../../../../../Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,incdir="../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/hdl/verilog"
+xpm_memory.sv,systemverilog,xpm,../../../../../Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/hdl/verilog"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/hdl/verilog"
+ila_0.vhd,vhdl,xil_defaultlib,../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/sim/ila_0.vhd,incdir="../../../../DAPHNE_Massibo.gen/sources_1/ip/ila_0/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,30 @@
++====================+======================+================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock    | Pin                                                                                                                            |
++====================+======================+================================================================================================================================+
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[14] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[12] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[7]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[6]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[4]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[1]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[11] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[3]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[8]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[5]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[9]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[0]  |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[10] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[13] |
+| clkout0            | clk_out6_clk_wiz_1_1 | gigabit_ehternet_inst/eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/DI[2]  |
+| clkout0            | clk_out1_clk_wiz_1_1 | leds_controller_inst/led0_reg_reg[4]/D                                                                                         |
+| clkout0            | clk_out1_clk_wiz_1_1 | leds_controller_inst/led0_reg_reg[2]/D                                                                                         |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_MID/readable_reg/D                                                                           |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_MID/FSM_sequential_state_read_reg[0]/D                                                       |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_MID/FSM_sequential_state_read_reg[1]/D                                                       |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_TOP/FSM_sequential_state_read_reg[1]/D                                                       |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_TOP/readable_reg/D                                                                           |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_TOP/FSM_sequential_state_read_reg[0]/D                                                       |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_BOT/readable_reg/D                                                                           |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_BOT/FSM_sequential_state_read_reg[1]/D                                                       |
+| clkout0            | clk_out6_clk_wiz_1_1 | AFE_0/TRIG_MANAGER_INST/FIFO_CTRL_BOT/FSM_sequential_state_read_reg[0]/D                                                       |
++--------------------+----------------------+--------------------------------------------------------------------------------------------------------------------------------+
