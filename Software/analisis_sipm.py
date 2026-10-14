@@ -479,10 +479,25 @@ def main():
     """
     Función principal que orquesta el análisis.
     """
-    filepath = "/home/cbenitez/Desktop/setpre/setfbk_meas2_31_3_v2_W_CH0_/setfbk_meas2_31_3_v2_W_CH0_0_W.npy"
+    filepath = "/home/dunelab/massibo/data/SET_6/MEAS_3/set6_meas3_45_5V_V2_5_W_CH0_8_W.npy"
 
     raw_timestamps, raw_waveforms = load_waveforms_from_npy(filepath)
     if raw_waveforms is None:
+        return
+
+    # --- Filter out invalid timestamps (0) ---
+    valid_mask = raw_timestamps != 0
+    n_total = len(raw_timestamps)
+    n_valid = np.sum(valid_mask)
+    n_invalid = n_total - n_valid
+    
+    if n_invalid > 0:
+        print(f"Filtrando waveforms con timestamp 0: {n_invalid} rechazadas ({n_valid} restantes).")
+        raw_timestamps = raw_timestamps[valid_mask]
+        raw_waveforms = raw_waveforms[valid_mask]
+        
+    if len(raw_waveforms) == 0:
+        print(f"No valid waveforms left after timestamp filtering in {os.path.basename(filepath)}")
         return
 
     # Convert waveforms to float32 as expected by filter_waveform.py (filter_waveform expects original polarity)
@@ -608,6 +623,16 @@ def main():
             print("No se generó información de pulsos para el ploteo de DCR.")
     else:
         print("No hay pulsos que contribuyan al DCR para plotear.")
+
+    # --- Plotear Timestamps (Time vs Index) ---
+    print("\n--- Visualizando Timestamps ---")
+    plt.figure(figsize=(12, 6))
+    plt.plot(all_pulse_timestamps_s, '.-', markersize=3, linewidth=0.5)
+    plt.title(f"Pulse Arrival Times - {os.path.basename(filepath)}")
+    plt.xlabel("Pulse Index")
+    plt.ylabel("Timestamp (s)")
+    plt.grid(True, alpha=0.3)
+    plt.show()
 
     print("\n--- Realizando Cálculos Alternativos (Paper Definitions) ---")
     

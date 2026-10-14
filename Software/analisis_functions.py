@@ -52,7 +52,14 @@ def load_waveforms_from_npy(filepath):
         return None, None
 
     timestamps = data[:, 0].astype(np.uint64)
-    waveforms = data[:, 1:].astype(np.int16)
+    
+    # Check for System Timestamp column (Shape 254 = 1 HW_TS + 1 SYS_TS + 252 WF)
+    if data.shape[1] == 254:
+        print("Detectado formato con Timestamp de Sistema. Ignorando columna 1.")
+        waveforms = data[:, 2:].astype(np.int16)
+    else:
+        # Standard format (1 HW_TS + 252 WF = 253)
+        waveforms = data[:, 1:].astype(np.int16)
     
     print(f"Cargadas {waveforms.shape[0]} waveforms de longitud {waveforms.shape[1]}.")
     return timestamps, waveforms
@@ -439,7 +446,24 @@ def analyze_file(filepath, plot=False):
     
     raw_timestamps, raw_waveforms = load_waveforms_from_npy(filepath)
     if raw_waveforms is None:
-        return None, None, None
+        return None, None, None, None, None
+
+    # --- Filter out invalid timestamps (0) ---
+    valid_mask = raw_timestamps != 0
+    n_total = len(raw_timestamps)
+    n_valid = np.sum(valid_mask)
+    n_invalid = n_total - n_valid
+    
+    if n_invalid > 0:
+        if plot:
+            print(f"Filtrando waveforms con timestamp 0: {n_invalid} rechazadas ({n_valid} restantes).")
+        raw_timestamps = raw_timestamps[valid_mask]
+        raw_waveforms = raw_waveforms[valid_mask]
+        
+    if len(raw_waveforms) == 0:
+        if plot:
+            print(f"No valid waveforms left after timestamp filtering in {os.path.basename(filepath)}")
+        return None, None, None, None, None
 
     # Convert waveforms to float32
     raw_waveforms_float = raw_waveforms.astype(np.float32)
@@ -463,7 +487,7 @@ def analyze_file(filepath, plot=False):
     
     if len(accepted_waveforms) == 0:
         print(f"No pulses accepted in {os.path.basename(filepath)}")
-        return None, None, None
+        return None, None, None, None, None
 
     # --- Procesar solo las waveforms aceptadas ---
     all_pulses = []
@@ -485,7 +509,7 @@ def analyze_file(filepath, plot=False):
     
     if not all_pulses:
         print(f"No pulses found in {os.path.basename(filepath)}")
-        return None, None, None, None
+        return None, None, None, None, None
         
     # Convert all pulse timestamps to seconds for DCR and Afterpulsing calculations
     all_pulse_timestamps_s = np.array(all_pulse_timestamps_ns) * 1e-9
@@ -499,7 +523,7 @@ def analyze_file(filepath, plot=False):
 
     if gain is None:
         print("Failed to determine gain")
-        return None, None, None
+        return None, None, None, None, None
 
     # --- Amplitude Analysis for XTP ---
     all_amplitudes = [p['amplitude'] for p in all_pulses]
@@ -591,4 +615,4 @@ def analyze_file(filepath, plot=False):
             print(f"APP : {APP_alternative * 100:.2f} %")
         print("="*30)
 
-    return dcr, crosstalk_prob, ap_prob, APP_alternative, XTP_alternative
+    return dcr, dcr_raw, crosstalk_prob, ap_prob, APP_alternative, XTP_alternative

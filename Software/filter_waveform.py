@@ -18,7 +18,7 @@ DEFAULT_ENABLE_ITERATIVE_REFINEMENT = True
 # --- PARÁMETROS DE AJUSTE ---
 DEFAULT_THRESHOLD_CORR = 0.50      # Umbral mínimo de correlación (0.0 a 1.0)
 TIME_PER_SAMPLE_NS = 16            # Nanosegundos por muestra (ajusta según tu digitizer)
-MIN_PULSE_WIDTH_NS = 120            # Ancho mínimo para ser considerado SiPM (descarta fugas SSR)
+MIN_PULSE_WIDTH_NS = 50            # Ancho mínimo para ser considerado SiPM (descarta fugas SSR)
 
 # --- PARÁMETROS PARA RUIDO SINTÉTICO (NUEVO) ---
 NOISE_WIDTH_NS = 50                # Anchura aproximada del ruido bipolar (muy rápido)

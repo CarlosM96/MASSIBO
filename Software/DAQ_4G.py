@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+
 try:
     import serial.tools.list_ports
     HAS_SERIAL_TOOLS = True
@@ -48,6 +49,8 @@ DB_PASSWORD=""
 DB_HOST="127.0.0.1"
 DB_NAME=""
 DB_TABLE=""
+
+
 MAX_TIMESTAMP = 2**32
 TIME_INCREMENT_NS = 24 
 OVERFLOW_LIMIT = MAX_TIMESTAMP * TIME_INCREMENT_NS 
@@ -270,6 +273,9 @@ def plot_analysis_results(results_per_channel):
         input("Press Enter to close plots and exit...")
 
 
+
+
+
 # --- Acquisition Function ---
 
 def run_acquisition(config):
@@ -431,18 +437,25 @@ def run_acquisition(config):
             if os.path.exists(filepath):
                 print(f"Analyzing {os.path.basename(filepath)}...")
                 try:
-                    dcr, xtp, app = analyze_file(filepath, plot=False)
+                    dcr, xtp, app, app_alt, xtp_alt = analyze_file(filepath, plot=False)
                     if dcr is not None:
                         analysis_results[ch_id]['DCR'].append(dcr)
                         analysis_results[ch_id]['XTP'].append(xtp)
                         analysis_results[ch_id]['APP'].append(app)
                         print(f" -> Results [ {ch_id} ]: DCR={dcr*1e3:.2f} mHz/mm2 | XTP={xtp*100:.2f}% | APP={app*100:.2f}%")
+                        print(f"    (Alt): APP_Alt={app_alt*100:.2f}% | XTP_Alt={xtp_alt*100:.2f}%")
+                        
+
+
                     else:
                         print(f" -> Analysis failed or no valid pulses found.")
                 except Exception as e:
                     print(f" -> Error analyzing file: {e}")
             else:
                 print(f"File not found: {filepath}")
+        
+
+
         
         print("\n" + "="*40)
         print("          PLOTTING SUMMARY")
@@ -456,6 +469,7 @@ def run_acquisition(config):
         print("       STARTING AUTOMATED GAIN ANALYSIS")
         print("="*40)
         
+
         for ch_id, filepath in files_created_in_this_run:
             if os.path.exists(filepath):
                 print(f"Analyzing Gain for {os.path.basename(filepath)}...")
@@ -464,10 +478,15 @@ def run_acquisition(config):
                     if gain is not None:
                         analysis_results[ch_id]['GAIN'].append(gain)
                         print(f" -> Results [ {ch_id} ]: GAIN={gain:.2f} (ADU x samples)/p.e.")
+                        
+
                     else:
                         print(f" -> Gain analysis failed.")
                 except Exception as e:
                     print(f" -> Error analyzing file: {e}")
+        
+
+
         
         print("\n" + "="*40)
         print("          PLOTTING GAIN SUMMARY")
